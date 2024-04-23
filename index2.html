@@ -3,37 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dia 3</title>
+  <title>Dia...</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-  /* Your existing CSS styles */
-</style>
 <body>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"> 
-  <h1>CONFIA EN TU INTUICION!</h1>
   <div class="container">
-    <p>Hola amor mio🤍. Es el dia 3 de esta aventura. El dia de hoy deberas descifrar una contraseña🤭, la cual está compuesta por tres partes 👀<br>
-      1. Acertijo: Lugar de calor y vapor🌫️, donde el sudor corrio a chorros sin parar. Un refugio para el cuerpo y el alma, donde por fin la tensión se disolvio sobre las sabanas...Recuerdas aquel día especial, ¿verdad? Hacia mucho frio afuera🌧️, pero nosotros estabamos calientitos🔥. El dia en que tanto tu como yo nos arrodillamos por primera vez... ¿Princesa Recuerdas la fecha?🤭 <br>
+    <h1>💝PARA MAYERCITA💝</h1>
+    <p>Hola hermosa señorita. Le parece si Jugamos un juego decifra unas 3 palabras🤭, que ganas haciendolo? quien sabe... quizas solo experiencia?👀<br><br>
+      1. Acertijo: En un lugar de calor y vapor🌫️, donde el sudor corrio a chorros sin parar. Un refugio para el cuerpo y el alma, donde por fin la tensión se disolvio sobre las sabanas...Recuerdas aquel día especial, ¿verdad? Hacia mucho frio afuera🌧️, pero nosotros estabamos calientitos🔥. El dia en que tanto tu como yo nos arrodillamos por primera vez... ¿Mayercita Recuerdas la fecha?🤭 <br>
       2. Memoria: Cual fue el primer nombre de nuestro sush? 👀<br>
-      3. Analiza: Un lenguaje sin palabras,que solo los corazones entienden, una mirada que lo dice todo, un sentimiento que dificilmente se apaga... Que es?❤️‍🔥🫣<br>
-       * No te desanimes si no encuentras la respuesta de inmediato.😈
-       <br>*¡Mucha suerte!*🫡</p>
+      3. Analiza: Un lenguaje sin palabras, que solo los corazones entienden, una mirada que lo dice todo, un sentimiento que dificilmente se apaga... Que es?❤️‍🔥🫣<br> <br>
+        No te desanimes si no encuentras la respuesta de inmediato, aveces no rendirse brinda recompensas🪢<br>¡Mucha suerte*🫡</p>
     <form id="passwordForm">
-      <h2>Memoria</h2>
-      <input type="password" id="passwordInput" placeholder="ya te la sabes jeje"><br>
-      <input type="button" value="ya casi!" onclick="checkPassword()">
+      <h1>(🌹) CONFIA EN TU INTUICIÓN! (🌹)</h1>
+      <h2>---Memoria---</h2>
+      <input type="password" id="passwordInput" placeholder="Ingrese su respuesta"><br>
+      <input type="button" value="decifrado?" onclick="checkPassword()">
       <br>
-      <img id="alertGif" src="" alt="Alert" style="display: none;"> <a href="#">Si tienes dudas llamame!</a>
+      <img id="alertGif" src="" alt="Alert" style="display: none;"> <a href="https://youtu.be/dQw4w9WgXcQ?si=CdZz62hVp5ov-Ygf">click aqui para una pista!🤭</a>
     </form>
 
     <div class="drops">
-      <div class="drop drop-1"></div>
-      <div class="drop drop-2"></div>
-      <div class="drop drop-3"></div>
+      <div class="drop drop-1"> </div>
+      <div class="drop drop-2"> <p id="countdown"></p></div>
+      <div class="drop drop-3"><img src="qr1.png" alt="qr" width="98"></div>
       <div class="drop drop-4"></div>
-      <div class="drop drop-5"></div>
+      <div class="drop drop-5"><img src="fotos.png" alt="qr" width="58"> <h3>🔞no escanear!</h3></div>
     </div>
   </div>
   <script>
@@ -41,8 +38,9 @@
     const alertGif = document.getElementById("alertGif");
 
     function checkPassword() {
-      const correctPassword = "rodolfo";
+      const correctPassword = "rodolfo"; 
       const enteredPassword = passwordInput.value;
+
       if (enteredPassword === correctPassword) {
         // Password is correct, redirect to another page
         window.location.href = "index3.html"; // Replace with the URL of your next page
@@ -52,14 +50,63 @@
         alertGif.style.display = "block"; // Show the alert gif
       }
     }
+    var countDownDate = new Date("April 26, 2024 00:00:00").getTime();
+
+    // Actualizar el contador cada segundo
+    var x = setInterval(function() {
+  
+      // Obtener la fecha y hora actual
+      var now = new Date().getTime();
+      
+      // Calcular la diferencia entre la fecha límite y la fecha actual
+      var distance = countDownDate - now;
+      
+      // Calcular el tiempo restante en días, horas, minutos y segundos
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      // Mostrar el resultado en el elemento con id="countdown"
+      document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+      
+      // Si el contador llega a cero, mostrar un mensaje
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "¡TIEMPO TERMINADO!";
+      }
+    }, 1000);
   </script>
   <style>
     body {
         background: linear-gradient(45deg, #FC466B, #3F5EFB);
-        height: 100vh;
         font-family: 'Montserrat', sans-serif;
       }
-      
+h3{
+  font-size: 14px;
+}
+      h1{
+        font-size:40px;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      h2{
+        font-size:20px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      p{
+        border: 2px dashed linear-gradient(orange, purple);    
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items:center ;
+        width: 90%;
+        height: 30%;
+        margin: 0 auto;
+        font-family:'Times New Roman', Times, serif;
+        font-size: large;
+        
+      }
       .container {
         display: flex;
         flex-flow: row wrap;
@@ -72,7 +119,8 @@
       form {
         background: rgba(255,255,255,0.3);
         padding: 3em;
-        height: 320px;
+        width: 750px;
+        height: 250px;
         border-radius: 20px;
         border-left: 1px solid rgba(255,255,255,0.3);
         border-top: 1px solid rgba(255,255,255,0.3);
@@ -180,8 +228,8 @@
       }
       
       .drop-2 {
-        height: 80px;
-        width: 80px;
+        height: 60px;
+        width: 160px;
         bottom: -30px;
         right: -10px;
       }
